@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/app_blue_color"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline25"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/operate_fragment_title_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/avenirheavy"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/white_color"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Urinal Electra 1" />
+
+        <TextView
+            android:id="@+id/scanned_product_fragment_near_by_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aveniraedium"
+            android:text="@string/operate_title"
+            android:textAlignment="center"
+            android:textColor="@color/white_color"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/operate_fragment_title_TV"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toEndOf="@+id/operate_fragment_title_TV"
+            app:layout_constraintTop_toBottomOf=" @+id/operate_fragment_title_TV" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/scheduled_open_close_constraint_L"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline25">
+
+        <TextView
+            android:id="@+id/hygiene_title_upper_hygiene_turn_on"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/avenirheavy"
+            android:textColor="@color/app_text_black_color"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/scheduled_hygiene_turn_on_now_BTN"
+            app:layout_constraintEnd_toStartOf="@+id/scheduled_hygiene_turn_on_now_BTN"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/operate_hygiene_flush"
+            />
+
+
+        <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+            android:id="@+id/scheduled_hygiene_turn_on_now_BTN"
+            android:layout_width="125dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_open_valve_btn"
+            android:fontFamily="@font/aveniraedium"
+            android:padding="7dp"
+            android:text="@string/operate_turn_on"
+            android:textAlignment="center"
+            android:textColor="@color/gray_color"
+            android:textSize="18sp"
+            app:autoSizeMinTextSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/operate_fragment_hygiene_upper_duration_title_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/aveniraedium"
+            android:text="@string/operate_screen_flush_duration"
+            android:textSize="17sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/duration_hygiene_value_TV"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/duration_hygiene_value_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_flush_duration_tv"
+            android:fontFamily="@font/aveniraedium"
+            android:paddingHorizontal="27dp"
+            android:paddingVertical="3dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/app_text_black_color"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/scheduled_hygiene_turn_on_now_BTN"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toEndOf="@+id/scheduled_hygiene_turn_on_now_BTN"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_hygiene_turn_on_now_BTN" />
+
+        <TextView
+            android:id="@+id/duration_hygiene_units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aveniraedium"
+            android:text="@string/seconds"
+            android:textAlignment="center"
+            android:textColor="@color/app_text_black_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/duration_hygiene_value_TV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/duration_hygiene_value_TV"
+            app:layout_constraintTop_toTopOf="@+id/duration_hygiene_value_TV" />
+
+        <SeekBar
+            android:id="@+id/hygiene_seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:progressTint="@color/app_blue_color"
+            android:thumb="@drawable/custom_operate_seek_bar_thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/duration_hygiene_value_TV" />
+
+        <View
+            android:id="@+id/view0"
+            android:layout_width="0dp"
+            android:layout_height="1.3dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/password_screen_gray_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hygiene_seek_bar" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scheduled_open_close_constraint_L">
+
+
+        <TextView
+            android:id="@+id/title_standBy_upper_turn_on"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/avenirheavy"
+            android:textColor="@color/app_text_black_color"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/scheduled_standBy_turn_on_now_BTN"
+            app:layout_constraintEnd_toStartOf="@+id/scheduled_standBy_turn_on_now_BTN"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="@string/operate_standby_mode"
+
+            />
+
+
+        <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+            android:id="@+id/scheduled_standBy_turn_on_now_BTN"
+            android:layout_width="125dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_open_valve_btn"
+            android:fontFamily="@font/aveniraedium"
+            android:padding="7dp"
+            android:text="@string/operate_turn_on"
+            android:textAlignment="center"
+            android:textColor="@color/gray_color"
+            android:textSize="18sp"
+            app:autoSizeMinTextSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/operate_fragment_standBy_upper_duration_title_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/aveniraedium"
+            android:text="@string/operate_duration"
+            android:textSize="17sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/duration_standBy_value_TV"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/duration_standBy_value_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_flush_duration_tv"
+            android:fontFamily="@font/aveniraedium"
+            android:paddingHorizontal="27dp"
+            android:paddingVertical="3dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/app_text_black_color"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/scheduled_standBy_turn_on_now_BTN"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toEndOf="@+id/scheduled_standBy_turn_on_now_BTN"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_standBy_turn_on_now_BTN" />
+
+        <TextView
+            android:id="@+id/duration_standBy_units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aveniraedium"
+            android:text="@string/seconds"
+            android:textAlignment="center"
+            android:textColor="@color/app_text_black_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/duration_standBy_value_TV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/duration_standBy_value_TV"
+            app:layout_constraintTop_toTopOf="@+id/duration_standBy_value_TV" />
+
+        <SeekBar
+            android:id="@+id/seek_standBy_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:progressTint="@color/app_blue_color"
+            android:thumb="@drawable/custom_operate_seek_bar_thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/duration_standBy_value_TV" />
+
+        <View
+            android:id="@+id/view0_standBy"
+            android:layout_width="0dp"
+            android:layout_height="1.3dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/password_screen_gray_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seek_standBy_bar" />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/operate_fragment_show_statistics_button_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/cutom_rectangle_border_blue"
+        android:fontFamily="@font/aveniraedium"
+        android:gravity="center"
+        android:paddingVertical="5dp"
+        android:text="Show Statistics"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout5"
+        app:layout_constraintVertical_bias="0.14999998" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline25"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layoutDirection="ltr">
+
+    <ImageView
+        android:id="@+id/recycle_view_user_devices_product_IV"
+        android:layout_width="50dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/recycle_view_user_devices_bottom_separator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/urinal" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/aveniraedium"
+        app:layout_constraintBottom_toTopOf="@+id/recycle_view_user_devices_last_connected_CTV"
+        app:layout_constraintEnd_toStartOf="@+id/recycle_view_user_devices_set_TV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/recycle_view_user_devices_last_connected_CTV"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/recycle_view_user_devices_last_connected_CTV"
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/recycler_view_item_users_devices_sn"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toTopOf="@+id/recycle_view_user_devices_last_updated_CTV"
+        app:layout_constraintEnd_toStartOf="@+id/recycle_view_user_devices_last_connected_value_CTV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/recycle_view_user_devices_product_IV"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+    <TextView
+        android:id="@+id/recycle_view_user_devices_last_updated_CTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/recycler_view_item_users_devices_last_updated"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/recycle_view_user_devices_set_TV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/recycle_view_user_devices_last_connected_CTV"
+        app:layout_constraintTop_toBottomOf="@+id/recycle_view_user_devices_last_connected_CTV" />
+
+    <TextView
+        android:id="@+id/recycle_view_user_devices_last_connected_value_CTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:maxLines="1"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/recycle_view_user_devices_last_connected_CTV"
+        app:layout_constraintEnd_toStartOf="@+id/recycle_view_user_devices_set_TV"
+        app:layout_constraintStart_toEndOf="@+id/recycle_view_user_devices_last_connected_CTV"
+        tools:text="Not Available" />
+
+    <TextView
+        android:id="@+id/recycle_view_user_devices_last_updated_value_CTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:textSize="11sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/recycle_view_user_devices_last_updated_CTV"
+        app:layout_constraintEnd_toStartOf="@+id/recycle_view_user_devices_set_TV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/recycle_view_user_devices_last_updated_CTV"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/recycle_view_user_devices_set_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/cutom_rectangle_border_blue"
+        android:fontFamily="@font/aveniraedium"
+        android:gravity="center"
+        android:paddingHorizontal="7dp"
+        android:text="@string/scanned_product_fragment_connect"
+        android:textColor="@color/app_text_grey_color"
+        app:layout_constraintBaseline_toBaselineOf="@+id/recycle_view_user_devices_last_connected_value_CTV"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/recycle_view_user_devices_bottom_separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/main_recyclerview_seperator_gray_colot"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</android.support.constraint.ConstraintLayout>

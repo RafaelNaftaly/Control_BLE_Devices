@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/operate_fragment_main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/app_blue_color"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="@+id/guideline12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/operate_fragment_title_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/avenirheavy"
+            android:gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/white_color"
+            android:textSize="22sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:text="Urinal Electra 1" />
+
+        <TextView
+            android:id="@+id/scanned_product_fragment_near_by_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aveniraedium"
+            android:text="@string/operate_title"
+            android:textAlignment="center"
+            android:textColor="@color/white_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/operate_fragment_title_TV"
+            app:layout_constraintStart_toEndOf="@+id/operate_fragment_title_TV"
+            app:layout_constraintTop_toBottomOf=" @+id/operate_fragment_title_TV"
+            app:layout_constraintVertical_bias="0.19999999" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <include
+        android:id="@+id/operate_fragment_triple_buttons"
+        layout="@layout/three_buttons_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline12" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white_color"
+        android:fillViewport="true"
+        android:layoutDirection="ltr"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/operate_fragment_triple_buttons"
+        app:layout_constraintVertical_bias="0.0">
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/operate_fragment_open_valve_TV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/avenirheavy"
+                android:text="@string/operate_screen_open_valve_time"
+                android:textAlignment="center"
+                android:textColor="@color/app_text_black_color"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/aveniraedium"
+                android:text="S"
+                android:textColor="@color/app_text_black_color"
+                android:textSize="18sp"
+                android:visibility="gone"
+                app:layout_constraintBaseline_toBaselineOf="@+id/operate_fragment_open_valve_TV_value"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@id/operate_fragment_open_valve_TV_value" />
+
+            <TextView
+                android:id="@+id/operate_fragment_open_valve_TV_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/custom_flush_duration_tv"
+                android:clickable="true"
+                android:fontFamily="@font/aveniraedium"
+                android:paddingHorizontal="27dp"
+                android:paddingVertical="3dp"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/app_text_black_color"
+                android:textSize="25sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/operate_fragment_open_valve_TV"
+                app:layout_constraintStart_toStartOf="@+id/operate_fragment_open_valve_TV"
+                app:layout_constraintTop_toBottomOf="@+id/operate_fragment_open_valve_TV" />
+
+            <SeekBar
+                android:id="@+id/operate_fragment_valve_seek_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:max="255"
+                android:min="0"
+                android:progressTint="@color/app_blue_color"
+                android:thumb="@drawable/custom_operate_seek_bar_thumb"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/operate_fragment_open_valve_TV"
+                app:layout_constraintStart_toStartOf="@+id/operate_fragment_open_valve_TV"
+                app:layout_constraintTop_toBottomOf="@+id/operate_fragment_open_valve_TV_value" />
+
+            <TextView
+                android:id="@+id/operate_fragment_open_valve_BTN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/custom_open_valve_btn"
+                android:fontFamily="@font/aveniraedium"
+                android:padding="7dp"
+                android:text="@string/operate_screen_open_valve"
+                android:textSize="17sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="@+id/operate_fragment_valve_seek_bar"
+                app:layout_constraintStart_toStartOf="@id/operate_fragment_valve_seek_bar"
+                app:layout_constraintTop_toBottomOf="@+id/operate_fragment_valve_seek_bar" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="1.3dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/password_screen_gray_color"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/operate_fragment_open_valve_BTN">
+
+            </View>
+
+            <include
+                android:id="@+id/operate_fragment_scheduled_hygiene_flush"
+                layout="@layout/single_operation_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="0.7dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/password_screen_gray_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/operate_fragment_scheduled_hygiene_flush">
+
+            </View>
+
+
+
+
+            <include
+                android:id="@+id/operate_fragment_scheduled_standby_flush"
+                layout="@layout/single_operation_screen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                app:layout_constraintTop_toBottomOf="@id/view4" />
+
+
+
+            <View
+                android:id="@+id/view_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="0.7dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/password_screen_gray_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/operate_fragment_scheduled_standby_flush"
+                />
+            <TextView
+                android:id="@+id/operate_fragment_show_statistics_button_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/cutom_rectangle_border_blue"
+                android:fontFamily="@font/aveniraedium"
+                android:gravity="center"
+                android:paddingVertical="5dp"
+                android:text="Show Statistics"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view_bottom" />
+        </android.support.constraint.ConstraintLayout>
+
+
+    </ScrollView>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+
+    <!--Add statistic counter + button to reset-->
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,311 @@
+<resources>
+    <string name="app_name">Control_BLE_Devices</string>
+
+
+    <!--Password Screen -->
+    <string name="password_screen_please_enter_password">Please enter the login password</string>
+    <string name="password_screen_connect">Login</string>
+
+    <!--Scanned My product Fragment-->
+
+    <string name="scanned_products_fragment_title_TV">My Products</string>
+    <string name="scanned_product_fragment_near_by_TV">Nearby</string>
+    <string name="scanned_product_fragment_new_TV">New</string>
+    <string name="scanned_product_fragment_no_data_display">No Stern products found in proximity</string>
+    <string name="scanned_product_fragment_check_connection">Please check unit connection with fixture</string>
+    <string name="scanned_product_fragment_check_connection_ok">OK</string>
+    <string name="scanned_product_fragment_connect">Connect</string>
+    <string name="scannes_product_fragment_scanning">Search and Filters are disabled while BLE is scanning</string>
+
+    <!--Product information Fragment-->
+    <string name="product_information_information">Information</string>
+    <string name="product_information_product_name">Product Name</string>
+    <string name="product_information_product_location">Products location</string>
+    <string name="product_information_serial_software_version_TV">BLE SW Version</string>
+    <string name="product_information_manufacturing_date_TV">Manufacturing Date</string>
+    <string name="product_information_product_type">Product Type</string>
+    <string name="product_information_serial_number_TV">Serial Number</string>
+    <string name="product_information_manufacturing_date">Manufacturing Date</string>
+    <string name="product_information_date_of_unit_TV">Current Unit Date</string>
+    <string name="product_information_time_of_unit_TV">Current Unit Time</string>
+    <string name="product_information_initial_pairing_configuration_date_TV">Initial Pairing Date</string>
+    <string name="product_information_serial_software_version">Software  version</string>
+    <string name="product_information_no_name_error">There was no name defined</string>
+    <string name="product_information_name_error_to_long">The name is to long. The maximum length is 22 characters</string>
+    <string name="product_information_name_error_wrong_char">The name can contain only digits and letters in English</string>
+    <string name="product_information_name_hint">Please enter a device name</string>
+    <string name="product_information_log_out">Log Out</string>
+    <string name="product_information_location_name">Unit Location</string>
+
+
+    <!--Operate Screen-->
+
+    <string name="operate_screen_open_valve_time">Manual Unit Activation</string>
+    <string name="operate_screen_hygiene_flash">Hygiene flush</string>
+    <string name="operate_screen_turn_on_now">Activate </string>
+    <string name="operate_screen_turn_off_now">Deactivate</string>
+    <string name="operate_screen_flush_duration">Duration</string>
+    <string name="operate_screen_duration">Duration</string>
+    <string name="operate_screen_open_valve">Open Valve</string>
+
+    <string name="operate_screen_close_valve">Close Valve</string>
+
+    <string name="operate_screen_scheduled_last_activation">Hygiene Flush Activation</string>
+    <string name="operate_screen_scheduled_hygiene_flush">Schedule Hygiene Flush</string>
+    <string name="operate_screen_scheduled_hygiene_flush_last_activation">Flush interval since last use</string>
+    <string name="operate_screen_scheduled_days">Days</string>
+
+    <string name="operate_screen_time">Time</string>
+
+    <string name="operate_screen_scheduled">Apply</string>
+    <string name="operate_screen_set_time">Schedule Standby</string>
+    <string name="operate_screen_interval_option">Interval option</string>
+
+    <string name="operate_screen_interval_option_text">Activate</string>
+    <string name="operate_screen_send_report">Send report of previous times</string>
+
+    <string name="operate_screen_scheduled_successfully_added">The Date was successfully added</string>
+
+    <string name="operate_screen_scheduled_no_more_room">You cannot schedule more than two events for one day</string>
+    <string name="operate_screen_scheduled_no_more_room_random_day">You cannot schedule more than two events by date</string>
+    <string name="operate_screen_scheduled_duration_is_zero">Activation duration has to be more than 0</string>
+    <string name="operate_screen_hour_tag">H</string>
+
+    <string name="operate_screen_second_tag">S</string>
+
+    <string name="operate_screen_no_scheduled">There is no scheduled data</string>
+
+
+    <!-- Operate ScreenStatistics-->
+    <string name="previous_hygiene_flush">Last Hygiene Flush Activation: </string>
+    <string name="next_hygiene_flush">Next hygiene Flash Activation:</string>
+    <string name="previous_standby">Last Standby: </string>
+    <string name="next_standby">Next Standby: </string>
+    <string name="last_filter_clean">Last Filter Clean: </string>
+    <string name="last_soap_refill">Last Soap Refill: </string>
+    <string name="number_of_activations">Activations since power up: </string>
+    <string name="average_open_time">Average activation time: </string>
+    <string name="half_flush">Half Flush Activation Percentage: </string>
+    <string name="time_since_last_powered">Run time since power up: </string>
+    <string name="operate_minutes">min</string>
+
+
+    <!--Setting Screen-->
+    <string name="settings">Settings</string>>
+    <string name="settings_screen_apply_settings">Apply</string>
+    <string name="settings_screen_save_preset">Save Preset</string>
+    <string name="settings_screen_load_preset">Load Preset</string>
+    <string name="settings_screen_new_preset">New Preset</string>
+    <string name="settings_screen_reset_to_factory">Reset to Factory Settings</string>
+    <string name="settings_screen_reset_counters">Reset counters</string>
+    <string name="settings_screen_load_preset_settings">Load preset</string>
+
+    <string name="settings_screen_soap_dosage_one">Soap dosage one</string>
+    <string name="settings_screen_soap_dosage_two">Soap dosage two</string>
+    <string name="settings_screen_soap_dosage_three">Soap dosage three</string>
+    <string name="settings_screen_soap_dosage_four">Soap dosage four</string>
+    <string name="settings_screen_default_value">Default</string>
+
+    <string name="settings_screen_steps">step</string>
+    <string name="settings_screen_connection_issue">Connection issue, please try again</string>
+    <string name="settings_screen_connection_issue_retry">Try Again</string>
+    <string name="settings_screen_connection_issue_cancel">Cancel</string>
+    <string name="settings_screen_percentage">%</string>
+    <string name="settings_screen_dosage">Dos</string>
+    <string name="settings_screen_no_value_to_send">There is no new value to send</string>
+
+
+
+    <!--Days of week-->
+    <string name="day_of_week_sunday">Sun</string>
+    <string name="day_of_week_monday">Mon</string>
+    <string name="day_of_week_tuesday">Tue</string>
+    <string name="day_of_week_wednesday">Wed</string>
+    <string name="day_of_week_thursday">Thu</string>
+    <string name="day_of_week_friday">Fri</string>
+    <string name="day_of_week_saturday">Sat</string>
+
+
+    <!--Days of week full names-->
+    <string name="day_of_week_full_sunday">Sunday</string>
+    <string name="day_of_week_full_monday">Monday</string>
+    <string name="day_of_week_full_tuesday">Tuesday</string>
+    <string name="day_of_week_full_wednesday">Wednesday</string>
+    <string name="day_of_week_full_thursday">Thursday</string>
+    <string name="day_of_week_full_friday">Friday</string>
+    <string name="day_of_week_full_saturday">Saturday</string>
+
+
+    <!--Single item products -->
+    <string name="recycler_view_item_users_devices_last_connection">Last connection: </string>
+    <string name="recycler_view_item_users_devices_last_updated">Last updated: </string>
+    <string name="recycler_view_item_users_devices_sn">S/N:</string>
+
+
+    <!--DialogHelper Class-->
+    <string name="bluetooth_is_disabled"> Bluetooth is disabled, please enable. </string>
+    <string name="open_bluetooth_settings">Open bluetooth settings</string>
+    <string name="cancel">Cancel</string>
+    <string name="loading">Loading...</string>
+    <string name="dialog_disconnect">Device disconnected</string>
+    <!--<string name=""></string>-->
+
+
+    <!--Enum Connection Status for dialog-->
+
+
+    <string name="connected">Device is connected.</string>
+
+    <string name="not_connected">Device is not connected.</string>
+
+    <string name="not_found">Device was not found.</string>
+
+    <string name="reconnected">Device is reconnected.</string>
+
+    <string name="disconnecting">Device is disconnecting.</string>
+
+    <string name="phone_bl_state_off">Bluetooth is disabled.</string>
+
+    <string name="phone_bl_state_on">Bluetooth is enabled.</string>
+
+
+
+    <!--App Dialog message -->
+
+    <string name="on_app_exit_message">Do you really want to exit ?</string>
+
+    <string name="app_exit"> Exit </string>
+
+    <string name="app_exit_dialog_cancel">Cancel</string>??
+    <string name="app_dialog_connecting">Connecting...</string>
+    <string name="YES">Yes</string>
+    <string name="NO">No</string>
+    <string name="validation_date_title">Date Validation</string>
+    <string name="validation_date_message">Is this the current date?</string>
+
+    <string name="seconds">sec</string>
+
+
+    <!--Single Operate Screen-->
+    <string name="choose_calendar_date">Set by Date</string>
+    <string name="operate_turn_on">Activate</string>
+
+    <string name="operate_turn_off">Deactivate</string>
+
+    <string name="operate_hygiene_flush">Manual Unit Activation</string>
+    <string name="operate_flush_duration">Activation duration</string>
+    <string name="operate_scheduled_hygiene_flush">Scheduled Hygiene flush</string>
+    <string name="operate_standby_mode">Manual Standby Activation</string>
+    <string name="operate_standby_duration">Standby duration</string>
+    <string name="operate_hygiene_duration">Duration</string>
+    <string name="operate_standby_scheduled">Schedule Standby</string>
+    <string name="operate_title">Activation Control</string>
+    <string name="operate_duration">Duration</string>
+
+
+
+    <!--single scheduled date-->
+    <string name="single_scheduled_date_time">Time</string>
+    <string name="single_scheduled_reset">Reset</string>
+    <string name="single_flush_duration">Flush duration since last use</string>
+
+    <string name="operate_fragment_refill_soap">Refill Soap</string>
+
+    <!--Range Types-->
+    <string name="range_type_detection_range">Detection Range</string>
+    <string name="range_type_delay_in">Delay In</string>
+    <string name="range_type_delay_out">Delay Out</string>
+    <string name="range_type_security_time">Security Time</string>
+    <string name="range_type_short_flush">Short Flush</string>
+    <string name="range_type_long_flush">Long Flush</string>
+    <string name="range_type_between_time">Between time</string>
+    <string name="range_type_soap_dosage">Soap Dosage</string>
+    <string name="range_type_foam_soap">Activation Time</string>
+    <string name="range_type_soap_motor">Soap motor (%)</string>
+    <string name="range_type_air_motor">Air motor(%)</string>
+    <string name="range_type_dosage_one">Dosage one</string>
+    <string name="range_type_dosage_two">Dosage two</string>
+    <string name="range_type_dosage_three">Dosage three</string>
+    <string name="range_type_dosage_four">Dosage four</string>
+    <string name="range_type_foam_soap_discharge">Foam Soap discharge</string>
+
+    <string name="range_type_battery_voltage">Battery Level</string>
+
+
+    <!--Preset screen-->
+
+    <string name="preset_screen_set">Set</string>
+    <string name="preset_screen_delete">Delete</string>
+
+
+    <!--Parring Dialog-->
+    <string name="name_passkey_name">Enter unit location</string>
+
+    <string name="name_passkey_continue">Pair</string>
+    <string name="name_passkey_pass_key">Enter Bluetooth pairing code</string>
+    <string name="name_passkey_pass_key_empty_error">You must enter the pairing code</string>
+    <string name="name_passkey_pass_length_error">The length must be maximum 6 digits</string>
+    <string name="name_passkey_name_empty_error">You must enter a name</string>
+    <string name="name_passkey_wrong_passkey">You have entered a wrong pairing code</string>
+    <string name="name_passkey_ok">OK</string>
+
+
+    <!--Statistics Screen-->
+    <string name="statistics_battery_low">Low</string>
+    <string name="statistics_battery_medium">Medium</string>
+    <string name="statistics_battery_ok">Ok</string>
+    <string name="statistics_no_info">No Information</string>
+
+    <string name="statistics_seconds">seconds</string>
+    <string name="statistics_lpc">liter/s per cycle</string>
+    <string name="statistics_minutes">Minutes</string>
+    <string name="statistics_hours">hours</string>
+    <string name="statistics_no_date">No record</string>
+
+
+    <!--single_statistics_button_row-->
+    <string name="single_statistics_button_row_reset">Reset</string>
+    <string name="single_statistics_button_row_date">Date:</string>
+    <string name="single_statistics_button_row_duration">Duration:</string>
+    <string name="single_statistics_button_row_clean_filter">Clean Filter</string>
+
+
+
+    <!--Statistic Screen-->
+    <string name="statistic_screen_title">Statistics</string>
+    <string name="statistic_screen_close">Close</string>
+
+
+    <!--Setting preset dialog-->
+    <string name="settings_preset_please_enter_title">Name this preset</string>
+    <string name="settings_preset_save">Save</string>
+    <string name="settings_preset_cancel">Cancel</string>
+    <string name="settings_preset_no_data_chosen">Please choose data for this preset</string>
+    <string name="settings_preset_hint">Name this preset</string>
+    <string name="settings_preset_no_preset">There is no data to display</string>
+    <string name="operate_presets">List of Presets</string>
+    <string name="operate_presets_no_name_error">Please enter a name for current preset</string>
+
+
+
+    <!--Receiving Data issue Dialog-->
+    <string name="receiving_data_issue_title">There was a communication error, please reconnect the device</string>
+    <string name="receiving_data_issue_button">Disconnect</string>
+
+
+    <!--Aerator spinner Array-->
+
+    <string-array name="aeratorSpinnerArray">
+
+        <item>1.3 LPM</item>
+        <item>1.89 LPM</item>
+        <item>3 LPM</item>
+        <item>4 LPM</item>
+        <item>6 LPM</item>
+
+
+    </string-array>
+
+
+</resources>
+

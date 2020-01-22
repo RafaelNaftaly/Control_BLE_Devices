@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:paddingHorizontal="0dp">
+
+    <TextView
+        android:id="@+id/single_statistics_date_duration_row_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:textDirection="ltr"
+        android:layoutDirection="ltr"
+        android:textAlignment="center"
+        android:fontFamily="@font/aveniraedium"
+        android:maxLines="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Last hygiene flush" />
+
+    <TextView
+        android:id="@+id/single_statistics_date_duration_row_date_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/app_blue_color"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/single_statistics_date_duration_row_date_key"
+        app:layout_constraintEnd_toStartOf="@+id/single_statistics_date_duration_row_title"
+        app:layout_constraintStart_toEndOf="@+id/single_statistics_date_duration_row_title"
+        tools:text="12/10/2018 12:34 AM" />
+
+
+    <TextView
+        android:id="@+id/single_statistics_date_duration_row_date_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/single_statistics_button_row_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/single_statistics_date_duration_row_title" />
+
+    <TextView
+        android:id="@+id/single_statistics_date_duration_row_duration_key"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/single_statistics_button_row_duration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/single_statistics_date_duration_row_date_value" />
+
+    <TextView
+        android:id="@+id/single_statistics_date_duration_row_duration_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:autoSizeMaxTextSize="18sp"
+        android:autoSizeMinTextSize="13sp"
+        android:fontFamily="@font/aveniraedium"
+        android:maxLines="1"
+        android:textAlignment="center"
+        android:textColor="@color/app_blue_color"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/single_statistics_date_duration_row_duration_key"
+        app:layout_constraintEnd_toStartOf="@+id/single_statistics_date_duration_row_date_value"
+
+        app:layout_constraintStart_toEndOf="@+id/single_statistics_date_duration_row_date_value"
+        tools:text="30" />
+
+
+    <View
+        android:id="@+id/single_statistics_date_duration_row_divider"
+        android:layout_width="0dp"
+        android:layout_height="1.3dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/main_recyclerview_seperator_gray_colot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/single_statistics_date_duration_row_duration_value"
+        app:layout_constraintVertical_bias="1.0" />
+
+</android.support.constraint.ConstraintLayout>

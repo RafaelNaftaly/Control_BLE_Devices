@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_information"
+        android:icon="@mipmap/informationactive"
+        android:title=""
+        app:showAsAction="never"
+
+        />
+      <item
+        android:id="@+id/action_operate"
+        android:icon="@mipmap/aperatedea"
+        android:title=""
+        />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@mipmap/settingsdea"
+        android:title="" />
+</menu>

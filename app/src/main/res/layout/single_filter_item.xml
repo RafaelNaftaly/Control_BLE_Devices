@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    android:id="@+id/single_filter_adapter_boarder"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginHorizontal="5dp"
+    android:layout_marginVertical="17dp"
+    android:background="@drawable/custom_filter_item"
+    >
+
+    <ImageView
+        android:id="@+id/single_filter_adapter_IMG"
+        android:layout_width="43dp"
+        android:layout_height="43dp"
+        android:layout_margin="3dp"
+        android:scaleType="fitXY"
+        android:layout_marginHorizontal="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@mipmap/sinkel"
+        />
+
+</android.support.constraint.ConstraintLayout>

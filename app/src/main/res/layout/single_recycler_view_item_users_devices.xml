@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:textDirection="ltr"
+    android:layoutDirection="ltr"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/recycle_view_user_devices_product_IV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.7"
+            android:padding="5dp"
+            android:scaleType="fitXY"
+            tools:src="@mipmap/urinal" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="5dp"
+            android:layout_weight="7"
+            android:layoutDirection="ltr"
+            android:orientation="vertical">
+
+
+            <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/avenirheavy"
+                android:gravity="left"
+                android:maxLines="1"
+                android:textColor="@color/app_text_black_color"
+                android:textSize="20sp"
+                app:autoSizeMaxTextSize="30sp"
+                tools:text="Shower" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+                    android:id="@+id/recycle_view_user_devices_last_connected_CTV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:autoSizeMinTextSize="15sp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:gravity="bottom|left"
+                    android:maxLines="1"
+                    android:text="@string/recycler_view_item_users_devices_last_connection"
+                    android:textColor="@color/app_text_grey_color"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="20sp" />
+
+                <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+                    android:id="@+id/recycle_view_user_devices_last_connected_value_CTV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="left"
+                    android:layout_weight="1"
+                    android:autoSizeMinTextSize="15sp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:paddingLeft="0dp"
+                    android:text="Never"
+                    android:textColor="@color/gray_color"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="20sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+                    android:id="@+id/recycle_view_user_devices_last_updated_CTV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/aveniraedium"
+                    android:gravity="bottom|left"
+                    android:maxLines="1"
+                    android:text="@string/recycler_view_item_users_devices_last_updated"
+                    android:textColor="@color/app_text_grey_color"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="20sp" />
+
+                <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+                    android:id="@+id/recycle_view_user_devices_last_updated_value_CTV"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="left"
+                    android:maxLines="1"
+                    android:paddingLeft="0dp"
+                    android:paddingTop="5dp"
+                    android:textSize="18sp"
+                    app:autoSizeMaxTextSize="20sp"
+                    tools:text="Never" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/recycle_view_user_devices_set_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/cutom_rectangle_border_blue"
+            android:fontFamily="@font/aveniraedium"
+            android:gravity="center"
+            android:paddingHorizontal="7dp"
+            android:text="@string/scanned_product_fragment_connect"
+            android:textColor="@color/app_text_grey_color" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/main_recyclerview_seperator_gray_colot" />
+
+
+</LinearLayout>

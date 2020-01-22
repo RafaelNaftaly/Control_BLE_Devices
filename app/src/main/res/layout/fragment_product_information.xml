@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_blue_color"
+    android:layoutDirection="ltr"
+    tools:context="stern.msapps.com.control_ble_devices.view.fragments.ProductInformationFragment">
+
+
+    <TextView
+        android:id="@+id/scanned_product_information_fragment_title_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/avenirheavy"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="@color/white_color"
+        android:textSize="22sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Urinal Electra 1" />
+
+
+    <TextView
+        android:id="@+id/scanned_product_fragment_near_by_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/product_information_information"
+        android:textAlignment="center"
+        android:textColor="@color/white_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/scanned_product_information_fragment_title_TV"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toEndOf="@+id/scanned_product_information_fragment_title_TV"
+        app:layout_constraintTop_toBottomOf="@+id/scanned_product_information_fragment_title_TV"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/scanned_product_information_fragment_shimmerConteiner"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white_color"
+        app:duration="750"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline4"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/product_information_bottom_constraint_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white_color"
+                android:layoutDirection="ltr"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"
+                tools:context="stern.msapps.com.control_ble_devices.view.fragments.ProductInformationFragment">
+
+                <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+                    android:id="@+id/product_information_product_name_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="@string/product_information_product_name"
+                    android:textAlignment="center"
+                    android:textColor="@color/app_text_black_color"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/guideline6"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingDefaultResource" />
+
+                <TextView
+                    android:id="@+id/product_information_product_dateOfUnit_value_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:maxLines="1"
+                    android:textColor="@color/password_screen_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_date_of_unit_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_date_of_unit_TV"
+                    tools:ignore="MissingConstraints"
+                    tools:text="1 July 2018" />
+
+                <View
+                    android:id="@+id/view_product_information_separator_line1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/main_recyclerview_seperator_gray_colot"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_product_name_value_TV_"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_product_name_value_TV_"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/product_information_product_type_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="@string/product_information_product_type"
+                    android:textColor="@color/app_text_black_color"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_product_name_value_TV_"
+                    app:layout_constraintTop_toBottomOf="@+id/view_product_information_separator_line1" />
+
+                <TextView
+                    android:id="@+id/product_information_serial_number_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="@string/product_information_serial_number_TV"
+                    android:textColor="@color/app_text_black_color"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/product_information_product_type_TV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline7" />
+
+                <TextView
+                    android:id="@+id/product_information_product_type_value_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:textColor="@color/password_screen_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_product_type_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_product_type_TV"
+                    tools:text="Basin" />
+
+                <TextView
+                    android:id="@+id/product_information_serial_number_value_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:textColor="@color/password_screen_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/product_information_product_type_value_TV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_serial_number_TV"
+                    tools:text="1711012132" />
+
+                <View
+                    android:id="@+id/view_product_information_separator_line2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/main_recyclerview_seperator_gray_colot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_product_type_value_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_product_type_value_TV"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/product_information_serial_software_version_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="@string/product_information_serial_software_version_TV"
+                    android:textColor="@color/app_text_black_color"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_product_type_value_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/view_product_information_separator_line2" />
+
+                <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+                    android:id="@+id/product_information_manufacturing_date_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:maxLines="1"
+                    android:text="@string/product_information_manufacturing_date_TV"
+                    android:textColor="@color/app_text_black_color"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/product_information_serial_software_version_TV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_serial_number_value_TV" />
+
+                <TextView
+                    android:id="@+id/product_information_serial_software_version_value_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:textColor="@color/password_screen_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_serial_software_version_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_serial_software_version_TV"
+                    tools:text="10" />
+
+                <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+                    android:id="@+id/product_information_manufacturing_date_value_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:maxLines="1"
+                    android:textColor="@color/password_screen_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/product_information_serial_software_version_value_TV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_manufacturing_date_TV"
+                    tools:text="1714" />
+
+                <View
+                    android:id="@+id/view_product_information_separator_line3"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/main_recyclerview_seperator_gray_colot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline6"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_serial_software_version_value_TV"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/product_information_date_of_unit_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="@string/product_information_date_of_unit_TV"
+                    android:textColor="@color/app_text_black_color"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toStartOf="@+id/guideline7"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_serial_software_version_value_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/view_product_information_separator_line3" />
+
+                <TextView
+                    android:id="@+id/product_information_time_of_unit_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="@string/product_information_time_of_unit_TV"
+                    android:textColor="@color/app_text_black_color"
+                    android:textSize="18sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/product_information_date_of_unit_TV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_manufacturing_date_value_TV" />
+
+                <EditText
+                    android:id="@+id/product_information_product_name_value_TV_"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/aveniraedium"
+                    android:hint="@string/product_information_name_hint"
+                    android:inputType="text"
+
+                    android:textAlignment="center"
+                    android:textColor="@color/password_screen_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_product_name_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_product_name_TV"
+                    tools:text="Electra 123" />
+
+                <TextView
+                    android:id="@+id/product_information_time_of_unit_value_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:textColor="@color/password_screen_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/product_information_product_dateOfUnit_value_TV"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_time_of_unit_TV"
+                    tools:text="14:50 PM" />
+
+                <View
+                    android:id="@+id/cleaner_product_information_separator_line4"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/main_recyclerview_seperator_gray_colot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline6"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_product_dateOfUnit_value_TV"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/product_information_initial_pairing_configuration_date_TV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="@string/product_information_initial_pairing_configuration_date_TV"
+                    android:textColor="@color/app_text_black_color"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_product_dateOfUnit_value_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/cleaner_product_information_separator_line4" />
+
+                <TextView
+                    android:id="@+id/product_information_initial_pairing_configuration_date_value_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:textColor="@color/password_screen_gray_color"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/product_information_initial_pairing_configuration_date_TV"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_initial_pairing_configuration_date_TV"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:text="1 August 2017" />
+
+                <View
+                    android:id="@+id/cleaner_product_information_separator_line5"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="@color/main_recyclerview_seperator_gray_colot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline6"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_initial_pairing_configuration_date_value_TV"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/product_information_location_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/avenirheavy"
+                    android:text="@string/product_information_location_name"
+                    android:textColor="@color/app_text_black_color"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline6"
+                    app:layout_constraintTop_toBottomOf="@id/cleaner_product_information_separator_line5"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/product_information_location_name_value"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:fontFamily="@font/aveniraedium"
+                    android:textColor="@color/password_screen_gray_color"
+                    android:textSize="17sp"
+                    tools:text="sd;lkvhslkdvksdjv"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/guideline6"
+                    app:layout_constraintTop_toBottomOf="@+id/product_information_location_name"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.035" />
+
+                <android.support.constraint.Guideline
+                    android:id="@+id/guideline7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.535" />
+
+            </android.support.constraint.ConstraintLayout>
+
+
+        </ScrollView>
+
+
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/ScannedProductsFragment">
+
+
+    <fragment
+        android:id="@+id/ScannedProductsFragment"
+        android:name="stern.msapps.com.control_ble_devices.view.fragments.ScannedProductsFragment"
+        android:label="fragment_scanned_products"
+        tools:layout="@layout/fragment_scanned_products">
+        <action
+            android:id="@+id/action_ScannedProductsFragment_to_productInformationFragment"
+            app:destination="@id/productInformationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productInformationFragment"
+        android:name="stern.msapps.com.control_ble_devices.view.fragments.ProductInformationFragment"
+        android:label="fragment_product_information"
+        tools:layout="@layout/fragment_product_information" >
+        <action
+            android:id="@+id/action_productInformationFragment_to_operateFragment"
+            app:destination="@id/operateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/operateFragment"
+        android:name="stern.msapps.com.control_ble_devices.view.fragments.OperateFragment"
+        android:label="fragment_technician_operate"
+        tools:layout="@layout/fragment_technician_operate" >
+        <action
+            android:id="@+id/to_settings"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="stern.msapps.com.control_ble_devices.view.fragments.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
+</navigation>

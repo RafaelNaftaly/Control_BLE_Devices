@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_gravity="center"
+    android:layout_height="wrap_content"
+    android:background="@drawable/cutom_rectangle_border_blue"
+    >
+
+
+    <TextView
+        android:id="@+id/txt_dia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/settings_preset_please_enter_title"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+        android:id="@+id/presets_dialog_name_request_et"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/cutom_rectangle_border_blue"
+        android:fontFamily="@font/aveniraedium"
+        android:hint="@string/settings_preset_hint"
+        android:inputType="textPersonName"
+        android:paddingVertical="5dp"
+        android:textSize="15sp"
+        android:paddingHorizontal="4dp"
+        app:layout_constraintBottom_toTopOf="@+id/presets_dialog_cancel_button_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_dia" />
+
+    <TextView
+        android:id="@+id/presets_dialog_save_button_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/cutom_rectangle_border_blue"
+        android:fontFamily="@font/aveniraedium"
+        android:padding="5dp"
+        android:text="@string/settings_preset_save"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/presets_dialog_cancel_button_tv"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/presets_dialog_name_request_et"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/presets_dialog_cancel_button_tv"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/cutom_rectangle_border_blue"
+        android:fontFamily="@font/aveniraedium"
+        android:padding="5dp"
+        android:text="@string/settings_preset_cancel"
+        android:textAlignment="center"
+        app:layout_constraintBaseline_toBaselineOf="@+id/presets_dialog_save_button_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/presets_dialog_save_button_tv" />
+</android.support.constraint.ConstraintLayout>

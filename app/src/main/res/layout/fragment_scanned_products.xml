@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context="stern.msapps.com.control_ble_devices.view.fragments.ScannedProductsFragment">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/header_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/app_blue_color"
+        android:paddingBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/scanned_product_information_fragment_title_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="50dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center_horizontal"
+            android:text="@string/scanned_products_fragment_title_TV"
+            android:fontFamily="@font/avenirheavy"
+            android:textColor="@color/white_color"
+            android:textSize="21.7sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/scanned_product_fragment_near_by_TV"
+            android:layout_width="72dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_rectangle_border_white"
+            android:gravity="center"
+            android:text="@string/scanned_product_fragment_near_by_TV"
+            android:fontFamily="@font/aveniraedium"
+            android:textColor="@color/white_color"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toEndOf="@+id/presets_fragment_search_icon_iv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanned_product_information_fragment_title_TV"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/scanned_product_fragment_new_TV"
+            android:layout_width="72dp"
+            android:layout_height="34dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/custom_rectangle_border_white"
+            android:gravity="center"
+            android:text="@string/scanned_product_fragment_new_TV"
+            android:fontFamily="@font/aveniraedium"
+            android:textColor="@color/white_color"
+            app:layout_constraintBaseline_toBaselineOf="@+id/scanned_product_fragment_near_by_TV"
+            app:layout_constraintStart_toStartOf="@+id/guideline3" />
+
+        <ImageView
+            android:id="@+id/presets_fragment_search_icon_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:src="@mipmap/search"
+            app:layout_constraintBottom_toBottomOf="@+id/scanned_product_fragment_near_by_TV"
+            app:layout_constraintEnd_toStartOf="@+id/scanned_product_fragment_near_by_TV"
+            app:layout_constraintHorizontal_bias="0.988"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/scanned_product_fragment_near_by_TV" />
+
+        <ImageView
+            android:id="@+id/scanned_product_fragment_filter_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:src="@mipmap/filter"
+            app:layout_constraintBottom_toBottomOf="@+id/scanned_product_fragment_new_TV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/scanned_product_fragment_new_TV"
+            app:layout_constraintTop_toTopOf="@+id/scanned_product_fragment_new_TV"
+            app:layout_constraintVertical_bias="0.39" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16266666" />
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <TextView
+            android:id="@+id/scanned_product_fragment_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/avenirheavy"
+            android:text="@string/product_information_log_out"
+            android:textColor="@color/white_color"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toTopOf="@+id/scanned_product_information_fragment_title_TV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/scanned_product_information_fragment_title_TV"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/scanned_product_fragment_recycler_view_search_CL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/scanned_product_swipe_to_refresh_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_constraint_layout">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/presets_fragment_RecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.51"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/scanned_product_fragment_searchView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:focusable="true"
+            app:iconifiedByDefault="false"
+            app:searchIcon="@null"
+            android:focusableInTouchMode="true"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            app:layout_constraintVertical_bias="0.51"
+            app:layout_constraintVertical_chainStyle="spread_inside">
+
+        </android.support.v7.widget.SearchView>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@color/cleaner_product_fragment_underline_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+
+            />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scanned_product_swipe_to_refresh_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scanned_product_fragment_recycler_view_search_CL"
+
+        >
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/scanned_product_fragment_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@color/white_color"
+            android:scrollbars="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanned_product_fragment_recycler_view_search_CL"
+            tools:listitem="@layout/single_recycler_view_item_users_devices" />
+
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/scanned_product_fragment_no_products_fount_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="@string/scanned_product_fragment_no_data_display"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:fontFamily="@font/aveniraedium"
+        app:layout_constraintTop_toBottomOf="@+id/scanned_product_fragment_recycler_view_search_CL"
+        />
+
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.33" />
+</android.support.constraint.ConstraintLayout>

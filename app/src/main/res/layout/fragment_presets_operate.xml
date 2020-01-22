@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr"
+    tools:context="stern.msapps.com.control_ble_devices.view.fragments.OperatePresetsFragment">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/app_blue_color"
+        app:layout_constraintBottom_toTopOf="@+id/guideline15"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TextView
+            android:id="@+id/operate_presets_fragment_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/aveniraedium"
+            android:text="@string/operate_presets"
+            android:textColor="@color/white_color"
+            android:textSize="21.7sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/operate_presets_fragment_done_tv"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/operate_presets_fragment_search_icon_IMG"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.049" />
+
+
+        <TextView
+            android:id="@+id/operate_presets_fragment_done_tv"
+            android:layout_width="59dp"
+            android:layout_height="28dp"
+            android:layout_marginEnd="28dp"
+            android:gravity="center_horizontal"
+            android:text="DONE"
+            android:textColor="@color/white_color"
+            android:textSize="13.7sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/operate_presets_fragment_title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/operate_presets_fragment_title_tv" />
+
+        <ImageView
+            android:id="@+id/operate_presets_fragment_search_icon_IMG"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:src="@mipmap/search"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/operate_presets_fragment_title_tv"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.755" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/operate_bottom_constraint_layout"
+        android:layout_width="match_parent"
+        android:layout_height="881dp"
+        android:background="@color/white_color"
+        android:layoutDirection="ltr"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guideline15"
+        tools:context=".view.fragments.PresetFragment">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/operate_presets_fragment_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/operate_presets_fragment_search_bottom_line"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/single_item_presets_recycler_view">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <android.support.v7.widget.SearchView
+            android:id="@+id/presets_fragment_searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/operate_presets_fragment_search_bottom_line"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/operate_presets_fragment_search_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1.3dp"
+            android:background="@color/gray_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/presets_fragment_searchView"
+            tools:layout_editor_absoluteY="42dp" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.20" />
+
+</android.support.constraint.ConstraintLayout>

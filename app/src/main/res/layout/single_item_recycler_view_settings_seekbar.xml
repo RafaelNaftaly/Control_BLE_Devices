@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/title_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:fontFamily="@font/avenirheavy"
+        android:text="@string/operate_screen_hygiene_flash"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/duration_value_TV"
+        app:layout_constraintStart_toEndOf="@+id/settings_seek_bar_adapter_selected_cb" />
+
+    <TextView
+        android:id="@+id/duration_value_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/custom_flush_duration_tv"
+        android:fontFamily="@font/aveniraedium"
+        android:paddingHorizontal="27dp"
+        android:paddingVertical="3dp"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/duration_units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/seconds"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/duration_value_TV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/duration_value_TV"
+        app:layout_constraintTop_toTopOf="@+id/duration_value_TV" />
+
+    <SeekBar
+        android:id="@+id/seek_bar_settings"
+        android:layout_width="0dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:progressTint="@color/app_blue_color"
+        android:thumb="@drawable/custom_operate_seek_bar_thumb"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/duration_value_TV"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <CheckBox
+        android:id="@+id/settings_seek_bar_adapter_selected_cb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@+id/title_TV"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/settinf_fragment_separator_line1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/main_recyclerview_seperator_gray_colot"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seek_bar_settings"
+        tools:ignore="MissingConstraints" />
+
+
+</android.support.constraint.ConstraintLayout>

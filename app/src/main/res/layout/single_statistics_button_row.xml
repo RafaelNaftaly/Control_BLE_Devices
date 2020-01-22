@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingHorizontal="5dp">
+
+    <TextView
+        android:id="@+id/single_statistics_button_row_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:autoSizeMaxTextSize="18sp"
+        android:autoSizeMinTextSize="13sp"
+        android:fontFamily="@font/aveniraedium"
+        android:maxLines="1"
+        app:layout_constraintBaseline_toBaselineOf="@+id/single_statistics_button_row_data"
+        app:layout_constraintEnd_toStartOf="@+id/single_statistics_button_row_data"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/single_statistics_button_row_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:maxLines="1"
+        android:paddingVertical="10dp"
+        android:textSize="18sp"
+        android:textColor="@color/app_blue_color"
+        app:layout_constraintBottom_toBottomOf="@id/single_statistics_button_row_divider"
+        app:layout_constraintEnd_toStartOf="@+id/guideline20"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline20"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="TextView" />
+
+    <TextView
+        android:id="@+id/single_statistics_button_row_reset_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:autoSizeMaxTextSize="16sp"
+        android:autoSizeMinTextSize="13sp"
+        android:background="@drawable/custom_open_valve_btn"
+        android:fontFamily="@font/aveniraedium"
+        android:maxLines="1"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="4dp"
+        android:text="@string/single_statistics_button_row_reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/single_statistics_button_row_data" />
+
+    <View
+        android:id="@+id/single_statistics_button_row_divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/main_recyclerview_seperator_gray_colot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/single_statistics_button_row_reset_BTN"
+
+        app:layout_constraintVertical_bias="1.0" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.65" />
+
+    <TextView
+        android:id="@+id/single_statistics_button_row_last_filer_clean"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:autoSizeMaxTextSize="18sp"
+        android:autoSizeMinTextSize="13sp"
+        android:text="@string/single_statistics_button_row_clean_filter"
+        android:textColor="@color/red_color"
+        app:layout_constraintBaseline_toBaselineOf="@+id/single_statistics_button_row_reset_BTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:visibility="gone"
+        app:layout_constraintStart_toEndOf="@+id/single_statistics_button_row_reset_BTN" />
+
+
+</android.support.constraint.ConstraintLayout>

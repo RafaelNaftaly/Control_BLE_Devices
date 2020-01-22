@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="app_blue_color">#016990</color>
+    <color name="white_color">#ffffff</color>
+    <color name="app_text_grey_color">#6e6f71</color>
+    <color name="password_screen_gray_color">#2c2c2c</color>
+    <color name="app_text_black_color">#000000</color>
+
+    <color name="gray_color">#999999</color>
+    <color name="password_btn_pressed_blue_color">#5acaf4</color>
+
+    <color name="main_recyclerview_seperator_gray_colot">#e0e1e2</color>
+
+    <color name="cleaner_main_activity_bottom_toolbar_background">#fafafa</color>
+
+    <color name="cleaner_product_fragment_underline_color">#7ab5c7</color>
+
+    <!--Operate screen-->
+    <color name="day_of_week_pressed_color">#7ab5c7</color>
+    <color name="operate_gary_color">#2c2c2c</color>
+    <color name="operate_reset_blue_color">#4a90e2</color>
+    <color name="operate_screen_gray_color">#2c2c2c</color>
+    <color name="operate_check_box_border_color">#016990</color>
+
+
+    <!--Settings screen-->
+    <color name="settings_screen_buttons_text_color">#6e6f71</color>
+
+
+    <!--Seek bar colors-->
+    <color name="operate_seekbar_start_color">#016990</color>
+    <color name="operate_seekbar_end_color">#67e5ff</color>
+
+    <!-- shimmer -->
+    <color name="transparent">#80000000</color>
+
+    <color name="red_color">#ff0000</color>
+    <color name="single_scheduled_cell_background">#dbe7ff</color>
+
+    <!--Bottom navigation bar-->
+    <color name="bottom_navigation_bar_backgraund">#fafafa</color>
+
+
+</resources>

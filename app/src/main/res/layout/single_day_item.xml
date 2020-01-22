@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/day_of_week"
+        android:layout_width="55sp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/custom_day_of_week_text_view"
+        android:fontFamily="@font/aveniraedium"
+        android:paddingVertical="7dp"
+        android:layout_marginHorizontal="2dp"
+        tool:text="@string/day_of_week_monday"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/white_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

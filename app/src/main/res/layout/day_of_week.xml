@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/day_of_week_days_recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.497" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1.3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/password_screen_gray_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_of_week_days_recyclerView" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/day_of_week_scheduled_scheduled_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+    </android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/day_of_week_flush_duration_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/operate_screen_flush_duration"
+        android:textColor="@color/operate_gary_color"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/day_of_week_flush_duration_value_TV"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/day_of_week_flush_duration_value_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/custom_flush_duration_tv"
+        android:fontFamily="@font/aveniraedium"
+        android:paddingHorizontal="27dp"
+        android:paddingVertical="3dp"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_of_week_scheduled_scheduled_recyclerView"
+        tools:text="5" />
+
+    <TextView
+        android:id="@+id/day_of_week_flush_duration_seconds"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aveniraedium"
+        android:text="S"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/day_of_week_flush_duration_value_TV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/day_of_week_flush_duration_value_TV"
+        app:layout_constraintTop_toTopOf="@+id/day_of_week_flush_duration_value_TV" />
+
+    <SeekBar
+        android:id="@+id/day_of_week_hygiene_flush_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:progressTint="@color/app_blue_color"
+        android:thumb="@drawable/custom_operate_seek_bar_thumb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_of_week_flush_duration_value_TV" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="1.3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/password_screen_gray_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/day_of_week_hygiene_flush_seek_bar"
+        app:layout_constraintVertical_bias="0.0" />
+</android.support.constraint.ConstraintLayout>

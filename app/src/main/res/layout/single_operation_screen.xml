@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="20dp"
+    >
+
+
+
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/scheduled_open_close_constraint_L"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/title_upper_turn_on"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/avenirheavy"
+            android:textColor="@color/app_text_black_color"
+            android:textSize="18sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/scheduled_turn_on_now_BTN"
+            app:layout_constraintEnd_toStartOf="@+id/scheduled_turn_on_now_BTN"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Hygiene flush" />
+
+
+        <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+            android:id="@+id/scheduled_turn_on_now_BTN"
+            android:layout_width="125dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_open_valve_btn"
+            android:fontFamily="@font/aveniraedium"
+            android:padding="7dp"
+            android:text="@string/operate_turn_on"
+            android:textAlignment="center"
+            android:textColor="@color/gray_color"
+            android:textSize="18sp"
+            app:autoSizeMinTextSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/operate_fragment_upper_duration_title_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/aveniraedium"
+            android:text="Flush duration"
+            android:textSize="17sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/duration_value_TV"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/duration_value_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/custom_flush_duration_tv"
+            android:fontFamily="@font/aveniraedium"
+            android:paddingHorizontal="27dp"
+            android:paddingVertical="3dp"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/app_text_black_color"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toStartOf="@+id/scheduled_turn_on_now_BTN"
+            app:layout_constraintHorizontal_bias="0.54"
+            app:layout_constraintStart_toEndOf="@+id/scheduled_turn_on_now_BTN"
+            app:layout_constraintTop_toBottomOf="@+id/scheduled_turn_on_now_BTN" />
+
+        <TextView
+            android:id="@+id/duration_units"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aveniraedium"
+            android:text="@string/seconds"
+            android:textAlignment="center"
+            android:textColor="@color/app_text_black_color"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/duration_value_TV"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/duration_value_TV"
+            app:layout_constraintTop_toTopOf="@+id/duration_value_TV" />
+
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:progressTint="@color/app_blue_color"
+            android:thumb="@drawable/custom_operate_seek_bar_thumb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/duration_value_TV" />
+
+        <View
+            android:id="@+id/view0"
+            android:layout_width="0dp"
+            android:layout_height="1.3dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/password_screen_gray_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/seek_bar" />
+    </android.support.constraint.ConstraintLayout>
+
+
+    <TextView
+        android:id="@+id/scheduled_TV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/avenirheavy"
+        android:text="@string/operate_screen_scheduled_last_activation"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scheduled_open_close_constraint_L" />
+
+    <TextView
+        android:id="@+id/scheduled_from_last_activation_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/operate_screen_scheduled_hygiene_flush_last_activation"
+        android:textSize="17sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/scheduled_from_last_activation_value_TV"
+        app:layout_constraintEnd_toEndOf="@+id/scheduled_TV"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/scheduled_TV" />
+
+
+    <TextView
+        android:id="@+id/scheduled_from_last_activation_value_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_flush_duration_tv"
+        android:fontFamily="@font/aveniraedium"
+        android:paddingHorizontal="27dp"
+        android:paddingVertical="3dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline24"
+        app:layout_constraintStart_toStartOf="@+id/guideline24"
+        app:layout_constraintTop_toBottomOf="@+id/scheduled_TV" />
+
+    <TextView
+        android:id="@+id/scheduled_hours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/operate_minutes"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="18sp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/scheduled_from_last_activation_value_TV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scheduled_from_last_activation_value_TV"
+        app:layout_constraintTop_toTopOf="@+id/scheduled_from_last_activation_value_TV" />
+
+    <SeekBar
+        android:id="@+id/scheduled_last_activation_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:max="96"
+        android:progressTint="@color/app_blue_color"
+        android:thumb="@drawable/custom_operate_seek_bar_thumb"
+        app:layout_constraintEnd_toEndOf="@+id/scheduled_open_close_constraint_L"
+        app:layout_constraintStart_toStartOf="@+id/scheduled_from_last_activation_TV"
+        app:layout_constraintTop_toBottomOf="@+id/scheduled_from_last_activation_value_TV" />
+
+    <TextView
+        android:id="@+id/operate_fragment_from_lastActivation_duration_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:text="Flush duration"
+        android:textSize="17sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/operate_fragment_from_lastActivation_duration_VALUE"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/operate_fragment_from_lastActivation_duration_VALUE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_flush_duration_tv"
+        android:fontFamily="@font/aveniraedium"
+        android:paddingHorizontal="27dp"
+        android:paddingVertical="3dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline24"
+        app:layout_constraintStart_toStartOf="@+id/guideline24"
+        app:layout_constraintTop_toBottomOf="@+id/scheduled_last_activation_seek_bar" />
+
+    <TextView
+        android:id="@+id/operate_fragment_from_lastActivation_duration_units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/seconds"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/operate_fragment_from_lastActivation_duration_VALUE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/operate_fragment_from_lastActivation_duration_VALUE"
+        app:layout_constraintTop_toTopOf="@+id/operate_fragment_from_lastActivation_duration_VALUE" />
+
+    <SeekBar
+        android:id="@+id/operate_fragment_from_lastActivation_duration_seekBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:progressTint="@color/app_blue_color"
+        android:thumb="@drawable/custom_operate_seek_bar_thumb"
+        app:layout_constraintEnd_toEndOf="@+id/operate_fragment_from_lastActivation_duration_units"
+        app:layout_constraintStart_toStartOf="@+id/operate_fragment_from_lastActivation_duration_TV"
+        app:layout_constraintTop_toBottomOf="@+id/operate_fragment_from_lastActivation_duration_VALUE" />
+
+
+    <CheckBox
+        android:id="@+id/operate_fragment_activate_radio_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:buttonTint="@color/operate_check_box_border_color"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/operate_screen_interval_option_text"
+        android:textColor="@color/operate_gary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operate_fragment_from_lastActivation_duration_seekBar" />
+
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="0dp"
+        android:layout_height="0.7dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/password_screen_gray_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/operate_fragment_activate_radio_BTN">
+
+    </View>
+
+
+    <TextView
+        android:id="@+id/scheduled_from_last_activation_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/avenirheavy"
+        android:text="@string/operate_screen_scheduled_hygiene_flush"
+        android:textSize="18sp"
+        android:textColor="@color/app_text_black_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view4" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/days_of_week_recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scheduled_from_last_activation_title" />
+
+    <TextView
+        android:id="@+id/choose_calendar_day_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_open_valve_btn"
+        android:fontFamily="@font/aveniraedium"
+        android:padding="7dp"
+        android:text="@string/choose_calendar_date"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/days_of_week_recyclerView" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1.3dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/password_screen_gray_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/choose_calendar_day_BTN" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/scheduled_date_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1">
+
+    </android.support.v7.widget.RecyclerView>
+
+
+    <TextView
+        android:id="@+id/date_duration_TV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/aveniraedium"
+        android:textSize="17sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/date_duration_value_TV"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/operate_screen_flush_duration" />
+
+    <TextView
+        android:id="@+id/date_duration_value_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_flush_duration_tv"
+        android:fontFamily="@font/aveniraedium"
+        android:paddingHorizontal="27dp"
+        android:paddingVertical="3dp"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline24"
+        app:layout_constraintStart_toStartOf="@+id/guideline24"
+        app:layout_constraintTop_toBottomOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/operate_scheduled_duration_units"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aveniraedium"
+        android:text="@string/seconds"
+        android:textAlignment="center"
+        android:textColor="@color/app_text_black_color"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/date_duration_value_TV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/date_duration_value_TV"
+        app:layout_constraintTop_toTopOf="@+id/date_duration_value_TV" />
+
+    <SeekBar
+        android:id="@+id/days_duration_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:progressTint="@color/app_blue_color"
+        android:thumb="@drawable/custom_operate_seek_bar_thumb"
+        app:layout_constraintEnd_toEndOf="@+id/operate_scheduled_duration_units"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/date_duration_value_TV" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.7dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/password_screen_gray_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/days_duration_seek_bar"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <TextView
+        android:id="@+id/operate_fragment_scheduled_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/custom_open_valve_btn"
+        android:fontFamily="@font/aveniraedium"
+        android:padding="7dp"
+        android:text="@string/operate_screen_scheduled"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/operate_fragment_set_time_BTN"
+        app:layout_constraintTop_toBottomOf="@+id/scheduled_date_recyclerView" />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline24"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <TextView
+        android:id="@+id/operate_fragment_set_time_BTN"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_open_valve_btn"
+        android:fontFamily="@font/aveniraedium"
+        android:padding="7dp"
+        android:text="@string/operate_screen_set_time"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/operate_fragment_scheduled_BTN"
+        app:layout_constraintEnd_toStartOf="@+id/operate_fragment_scheduled_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>
+
+

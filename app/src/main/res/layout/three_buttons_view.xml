@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white_color"
+    >
+
+
+    <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+        android:id="@+id/single_item_settings_recycler_triple_button_new_preset_BTN"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:autoSizeMinTextSize="8sp"
+        android:background="@drawable/custom_settings_button"
+        android:fontFamily="@font/avenirheavy"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingHorizontal="5dp"
+        android:text="@string/settings_screen_new_preset"
+        android:textColor="@color/settings_screen_buttons_text_color"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/single_item_settings_recycler_triple_button_load_preset_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/settings_screen_save_preset" />
+
+    <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+        android:id="@+id/single_item_settings_recycler_triple_button_load_preset_BTN"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:autoSizeMinTextSize="11sp"
+        android:background="@drawable/custom_settings_button"
+        android:fontFamily="@font/avenirheavy"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingHorizontal="5dp"
+        android:text="@string/settings_screen_load_preset"
+
+        android:textColor="@color/settings_screen_buttons_text_color"
+        android:textSize="17sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/single_item_settings_recycler_triple_button_new_preset_BTN"
+        app:layout_constraintEnd_toStartOf="@+id/single_item_settings_recycler_triple_button_save_preset_BTN"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/single_item_settings_recycler_triple_button_new_preset_BTN"
+        tools:text="@string/settings_screen_save_preset" />
+
+    <stern.msapps.com.control_ble_devices.utils.AutoResizeTV
+        android:id="@+id/single_item_settings_recycler_triple_button_save_preset_BTN"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:autoSizeMinTextSize="11sp"
+        android:background="@drawable/custom_settings_button"
+        android:fontFamily="@font/avenirheavy"
+        android:gravity="center"
+        android:maxLines="1"
+        android:paddingHorizontal="5dp"
+        android:text="@string/settings_screen_save_preset"
+        android:textColor="@color/settings_screen_buttons_text_color"
+        android:textSize="17sp"
+        android:enabled="false"
+        android:alpha="0.3"
+        app:layout_constraintBaseline_toBaselineOf="@+id/single_item_settings_recycler_triple_button_load_preset_BTN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/single_item_settings_recycler_triple_button_load_preset_BTN"
+        tools:text="@string/settings_screen_save_preset" />
+</android.support.constraint.ConstraintLayout>
